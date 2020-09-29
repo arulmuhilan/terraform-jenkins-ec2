@@ -2,7 +2,7 @@
 final GIT_CREDENTIALS_ID = "github-ssh"
 
 pipeline {
-    agent any
+    agent master
      
     stages {
       stage('checkout') {
