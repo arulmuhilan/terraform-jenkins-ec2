@@ -2,7 +2,7 @@
 final GIT_CREDENTIALS_ID = "github-ssh"
 
 pipeline {
-    agent master
+    agent any
      
     stages {
       stage('checkout') {
@@ -19,14 +19,14 @@ pipeline {
                     def tfHome = tool name: 'Arultest'
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
-                sh 'terraform --version -no-color'
+                //sh 'terraform --version -no-color'
             }
         }
         
          stage('Provision infrastructure') {
              
             steps {
-            ansiColor('xterm') {
+            {
                 //sh  'terraform destroy --auto-approve'
                 //sh  'terraform refresh'
                 sh  'terraform init'
