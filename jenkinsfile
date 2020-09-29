@@ -16,8 +16,8 @@ pipeline {
   stage('Set Terraform path') {
             steps {
                 script {
-                    def tfHome = tool name: 'Arultest-TF'
-                    //env.PATH = "${tfHome}:${env.PATH}"
+                    def tfHome = tool name: 'Arultest'
+                    env.PATH = "${tfHome}:${env.PATH}"
                 }
                 sh 'terraform --version -no-color'
             }
