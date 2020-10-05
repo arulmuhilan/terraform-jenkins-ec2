@@ -1,5 +1,5 @@
   final GIT_REPO = 'https://github.com/arulmuhilan/terraform-jenkins-ec2'
-final GIT_CREDENTIALS_ID = "github-ssh"
+final GIT_CREDENTIALS_ID = "ilamuhilan"
 
 pipeline {
     agent any
