@@ -23,7 +23,7 @@ pipeline {
             }
         }*/
         
-         stage('Provision infrastructure') {
+         /*stage('Provision infrastructure') {
              
             steps {
             {
@@ -32,7 +32,7 @@ pipeline {
               }
              
             }
-        }
+        }*/
         
       
       
