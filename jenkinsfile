@@ -13,7 +13,7 @@ pipeline {
           }
         }
 
-  stage('Set Terraform path') {
+  /*stage('Set Terraform path') {
             steps {
                 script {
                     def tfHome = tool name: 'Arultest'
@@ -21,16 +21,18 @@ pipeline {
                 }
                 sh 'terraform --version -no-color'
             }
-        }
+        }*/
         
          stage('Provision infrastructure') {
              
             steps {
             {
+	        sh "D:/Jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/Arultest/terraform.exe init"
+		sh "D:/Jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/Arultest/terraform.exe plan"
                 //sh  'terraform destroy --auto-approve'
                 //sh  'terraform refresh'
-                sh  'terraform init'
-                sh  'terraform plan'
+                //sh  'terraform init'
+                //sh  'terraform plan'
                 //sh 'terraform apply --auto-approve'
               }
              
