@@ -16,10 +16,11 @@ pipeline {
   stage('Set Terraform path') {
             steps {
                 /*script {
+		bat label: '', script: 'D:/Jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/Arultest/terraform.exe init'
                     def tfHome = tool name: 'Arultest'
                     env.PATH = "${tfHome}:${env.PATH}"
                 }*/
-		sh 'D:/Jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/Arultest/terraform.exe init'
+		//bat 'D:/Jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/Arultest/terraform.exe init'
                 sh 'terraform --version -no-color'
             }
         }
